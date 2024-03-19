@@ -1,16 +1,38 @@
 // Traditional function expression
-
-const add1 = function (x, y) {
-  return x + y;
+const add = function (a, b) {
+  return a + b;
 };
 
-console.log(add1(2, 3));
+// Arrow function for addition
+const arrowAdd = (a, b) => a + b;
 
-// Arrow function
-const add2 = (x, y) => {
-  result = x + 2;
-  result2 = y + result;
-  return result + result2;
+// Traditional function expression with multiple lines
+const greet = function (name) {
+  return `Hello, ${name}`;
 };
 
-console.log(add2(4, 5));
+// Arrow function with implicit retur and tempalte literal
+const arrowGreet = (name) => `Hello ${name}`;
+
+// Arrow function with no parameters
+const sayHello = () => "Hello";
+
+// Arrow function with rest parameters
+const sumAll = (...numbers) => {
+  return numbers.reduce((acc, num) => acc + num, 0);
+};
+
+// Arrow function using destructuring
+const getFullName = ({ firstName, LastaNme }) => `${firstName} ${LastaNme}`;
+
+// Example usage
+console.log(add(2, 3)); // Output 5
+console.log(add(2, 3)); // Output: 5
+console.log(arrowAdd(2, 3)); // Output: 5
+console.log(greet("John")); // Output: Hello, John!
+console.log(arrowGreet("John")); // Output: Hello, John!
+console.log(sayHello()); // Output: Hello!
+console.log(sumAll(1, 2, 3, 4, 5)); // Output: 15
+
+const person = { firstName: "John", lastName: "Doe" };
+console.log(getFullName(person)); // Output: John Doe
