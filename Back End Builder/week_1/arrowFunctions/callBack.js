@@ -8,10 +8,14 @@
 
 // Example 1 ⭐️⭐️⭐️⭐️⭐️
 
-hello(goodbye);
+var lname = function () {
+  console.log("Stylidis");
+};
 
-function hello(callback) {
-  console.log("Hello");
+firstName(lname);
+
+function firstName(callback) {
+  console.log("Christos");
   callback();
 }
 
@@ -44,3 +48,20 @@ sum(displayPage, 3, 5);
 function displayPage(result) {
   document.getElementById("myH1").textContent = result;
 }
+
+// Example 3 ⭐️⭐️⭐️⭐️⭐️
+
+// Function to perform addition and call a callback with the result
+function printAdd(callback, x, y) {
+  var result = x + y;
+  // Call the callback function with the result
+  callback(result);
+}
+
+// Callback function to print the result
+function printMessage(result) {
+  console.log("The result is: " + result);
+}
+
+// Call the printAdd function and pass printMessage as a callback
+printAdd(printMessage, 2, 3);
