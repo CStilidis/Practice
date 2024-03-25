@@ -23,7 +23,7 @@ const sumAll = (...numbers) => {
 };
 
 // Arrow function using destructuring
-const getFullName = ({ firstName, LastaNme }) => `${firstName} ${LastaNme}`;
+const getFullName = ({ firstName, lastName }) => `${firstName} ${lastName}`;
 
 // Example usage
 console.log(add(2, 3)); // Output 5
@@ -34,5 +34,7 @@ console.log(arrowGreet("John")); // Output: Hello, John!
 console.log(sayHello()); // Output: Hello!
 console.log(sumAll(1, 2, 3, 4, 5)); // Output: 15
 
-const person = { firstName: "John", lastName: "Doe" };
+const person = { firstName: "John", lastName: "Doe", age: 37 };
 console.log(getFullName(person)); // Output: John Doe
+
+console.log();
